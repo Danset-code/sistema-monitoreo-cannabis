@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Monitoreo</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- MENÚ LATERAL -->
+    <!-- ========================= -->
+
+    <button id="menuToggle" class="menu-toggle">
+        ☰
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+	<button id="closeSidebar" class="close-sidebar">
+            ✕
+        </button>
+        <div class="logo">
+            <h2>Monitoreo</h2>
+        </div>
+
+        <ul>
+            <li onclick="window.location.href='index.html'">
+                Dashboard
+            </li></br>
+
+            <li onclick="window.location.href='sensores.html'">
+                Sensores
+            </li></br>
+
+            <li onclick="window.location.href='reportes.html'">
+                Reportes
+            </li>
+        </ul>
+    </aside>
+
+
+    <!-- ========================= -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ========================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <h1>
+                Sistema de Monitoreo de Cultivo Medicinal
+            </h1>
+
+            <button id="btnCrearGrafico" class="btn-primary">
+                Crear gráfico
+            </button>
+
+        </header>
+
+
+        <!-- ========================= -->
+        <!-- TARJETAS DE SENSORES -->
+        <!-- ========================= -->
+
+        <section class="cards-container">
+
+            <div class="card">
+
+                <h3>Temperatura</h3>
+
+                <p class="valorSensor">
+                    25
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Humedad</h3>
+
+                <p class="valorSensor">
+                    70
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>CO₂</h3>
+
+                <p class="valorSensor">
+                    40
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- CONTENEDOR GRÁFICOS -->
+        <!-- ========================= -->
+
+        <section
+            id="contenedorGraficos"
+            class="graficos-container"
+        >
+
+            <div class="grafico-card">
+
+                <div class="grafico-header">
+
+                    <h3>Temperatura ambiente</h3>
+
+                    <button class="btnEliminar">
+
+                        Eliminar
+
+                    </button>
+
+                </div>
+
+                <div class="grafico-body">
+
+                    <canvas></canvas>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================= -->
+    <!-- MODAL CREAR GRÁFICO -->
+    <!-- ========================= -->
+
+    <div
+        id="modalCrearGrafico"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2>
+                    Crear nuevo gráfico
+                </h2>
+
+                <span
+                    id="cerrarModal"
+                    class="cerrar"
+                >
+                    &times;
+                </span>
+
+            </div>
+
+
+            <!-- FORMULARIO -->
+
+            <form id="formGrafico">
+
+                <div class="form-group">
+
+                    <label>
+                        Nombre del gráfico
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombreGrafico"
+                        placeholder="Ingrese nombre"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Tipo de gráfico
+                    </label>
+
+                    <select id="tipoGrafico">
+
+                        <option value="">
+                            Seleccione
+                        </option>
+
+                        <option value="Lineal">
+                            Lineal
+                        </option>
+
+                        <option value="Barras">
+                            Barras
+                        </option>
+
+                        <option value="Circular">
+                            Circular
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-primary"
+                >
+
+                    Guardar gráfico
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCRIPT -->
+    <!-- ========================= -->
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

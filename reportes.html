@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reportes</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <button id="menuToggle" class="menu-toggle">
+        ☰
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+	<button id="closeSidebar" class="close-sidebar">
+            ✕
+        </button>
+        <div class="logo">
+            <h2>Monitoreo</h2>
+        </div>
+
+        <ul>
+            <li onclick="window.location.href='index.html'">
+                Dashboard
+            </li></br>
+
+            <li onclick="window.location.href='sensores.html'">
+                Sensores
+            </li></br>
+
+            <li onclick="window.location.href='reportes.html'">
+                Reportes
+            </li>
+        </ul>
+    </aside>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="main-content">
+
+        <header class="header">
+
+            <h1>
+                Reportes del sistema
+            </h1>
+
+            <button class="btn-primary">
+                Exportar Excel
+            </button>
+
+        </header>
+
+
+        <!-- FILTRO -->
+
+        <input
+            type="text"
+            id="filtroReporte"
+            class="filter-input"
+            placeholder="Buscar reporte..."
+        >
+
+
+        <!-- TABLA REPORTES -->
+
+        <table class="report-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Fecha</th>
+                    <th>Tipo Sensor</th>
+                    <th>Valor</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr class="filaReporte">
+
+                    <td>2026-06-01</td>
+                    <td>Temperatura</td>
+                    <td>25°C</td>
+
+                </tr>
+
+                <tr class="filaReporte">
+
+                    <td>2026-06-01</td>
+                    <td>Humedad</td>
+                    <td>71%</td>
+
+                </tr>
+
+                <tr class="filaReporte">
+
+                    <td>2026-06-01</td>
+                    <td>CO₂</td>
+                    <td>39 ppm</td>
+
+                </tr>
+
+                <tr class="filaReporte">
+
+                    <td>2026-06-02</td>
+                    <td>Temperatura</td>
+                    <td>27°C</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sensores</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <button id="menuToggle" class="menu-toggle">
+        ☰
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+	<button id="closeSidebar" class="close-sidebar">
+            ✕
+        </button>
+        <div class="logo">
+            <h2>Monitoreo</h2>
+        </div>
+
+        <ul>
+            <li onclick="window.location.href='index.html'">
+                Dashboard
+            </li></br>
+
+            <li onclick="window.location.href='sensores.html'">
+                Sensores
+            </li></br>
+
+            <li onclick="window.location.href='reportes.html'">
+                Reportes
+            </li>
+        </ul>
+    </aside>
+
+    <!-- CONTENIDO -->
+
+    <main class="main-content">
+
+        <header class="header">
+
+            <h1>
+                Sensores conectados
+            </h1>
+
+        </header>
+
+
+        <!-- TARJETAS -->
+
+        <section class="cards-container">
+
+            <div class="card">
+
+                <h3>Temperatura</h3>
+
+                <p class="valorSensor">26°C</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Humedad</h3>
+
+                <p class="valorSensor">74%</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>CO₂</h3>
+
+                <p class="valorSensor">42 ppm</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TABLA -->
+
+        <table class="table-sensors">
+
+            <thead>
+
+                <tr>
+
+                    <th>Sensor</th>
+                    <th>Estado</th>
+                    <th>Última lectura</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Sensor Temperatura</td>
+                    <td>Activo</td>
+                    <td class="valorSensor">26°C</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Sensor Humedad</td>
+                    <td>Activo</td>
+                    <td class="valorSensor">74%</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Sensor CO₂</td>
+                    <td>Activo</td>
+                    <td class="valorSensor">42 ppm</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
